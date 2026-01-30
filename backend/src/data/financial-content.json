@@ -1,0 +1,250 @@
+{
+    "lastUpdated": "2026-01-30T12:00:00Z",
+    "sector": "technology",
+    "articles": [
+        {
+            "id": "art-001",
+            "headline": "Apple Reports Record Q4 Revenue Driven by iPhone 17 Sales",
+            "content": "Apple Inc. announced record-breaking fourth quarter revenue of $123.9 billion, exceeding analyst expectations by 8%. The iPhone 17 series contributed 52% of total revenue, with particularly strong demand in emerging markets. CEO Tim Cook highlighted the success of Apple Intelligence features as a key driver for upgrades.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T14:30:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "art-002",
+            "headline": "Microsoft Azure Growth Accelerates Amid AI Demand",
+            "content": "Microsoft reported Azure cloud revenue growth of 34% year-over-year, beating expectations of 29%. The company attributed the acceleration to enterprise adoption of Azure AI services and Copilot integrations. CFO Amy Hood noted that AI services now represent 12% of Azure revenue.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T16:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "MSFT"
+            ]
+        },
+        {
+            "id": "art-003",
+            "headline": "Tesla Cybertruck Production Ramps Up, Deliveries Exceed Targets",
+            "content": "Tesla announced Cybertruck production has reached 5,000 units per week at the Texas Gigafactory, ahead of schedule. The company delivered 47,000 Cybertrucks in Q4, with a backlog of over 200,000 reservations. Elon Musk stated the truck will become profitable by Q2 2026.",
+            "source": "Tesla IR",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T20:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-004",
+            "headline": "NVIDIA H200 Chip Demand Outstrips Supply",
+            "content": "NVIDIA disclosed that demand for its H200 AI accelerator chips continues to exceed manufacturing capacity. The company has secured additional TSMC production slots for Q2. Data center revenue is projected to grow 45% in the upcoming quarter.",
+            "source": "NVIDIA Investor Relations",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T18:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "NVDA"
+            ]
+        },
+        {
+            "id": "art-005",
+            "headline": "Tech Analyst: Apple's AI Strategy is Working",
+            "content": "Morgan Stanley analyst Erik Woodring upgraded Apple to Overweight, citing strong adoption of Apple Intelligence features. The analyst noted that iPhone upgrade rates are at their highest since 2021, driven by AI capabilities exclusive to newer models.",
+            "source": "Morgan Stanley Research",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-29T09:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "art-006",
+            "headline": "Rumors: Microsoft in Talks to Acquire AI Startup",
+            "content": "Unconfirmed reports suggest Microsoft is in late-stage discussions to acquire Anthropic competitor startup for $8 billion. Sources familiar with the matter say a deal could be announced within weeks, though Microsoft declined to comment.",
+            "source": "TechCrunch",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T11:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "MSFT"
+            ]
+        },
+        {
+            "id": "art-007",
+            "headline": "Tesla FSD V13 Receives Positive Early Reviews",
+            "content": "Early testers of Tesla's Full Self-Driving V13 software report significant improvements in handling complex urban intersections. The update includes enhanced vision-only perception and reduced intervention rates. Regulatory approval for unsupervised FSD remains pending.",
+            "source": "Electrek",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T14:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-008",
+            "headline": "NVIDIA CEO: AI Spending Will Double in 2026",
+            "content": "At the World Economic Forum, NVIDIA CEO Jensen Huang predicted enterprise AI infrastructure spending will double in 2026 compared to 2025. He emphasized that AI is transitioning from experimentation to production workloads across industries.",
+            "source": "CNBC",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-25T10:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "NVDA"
+            ]
+        },
+        {
+            "id": "art-009",
+            "headline": "Social Buzz: Apple Vision Pro 2 Launch Imminent?",
+            "content": "Multiple social media posts from supply chain insiders suggest Apple Vision Pro 2 production has begun. Unverified claims point to a March 2026 announcement with improved display resolution and reduced weight.",
+            "source": "@mingchikuo",
+            "sourceType": "social_media",
+            "timestamp": "2026-01-29T22:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "art-010",
+            "headline": "Microsoft Copilot Enterprise Adoption Surpasses 500K Seats",
+            "content": "Microsoft announced that Copilot for Microsoft 365 has exceeded 500,000 paid enterprise seats, a 150% increase from the previous quarter. Early adopter companies report average productivity gains of 25% for knowledge workers.",
+            "source": "Microsoft Blog",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T12:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "MSFT"
+            ]
+        },
+        {
+            "id": "art-011",
+            "headline": "Analyst Downgrades Tesla on Valuation Concerns",
+            "content": "Goldman Sachs analyst Mark Delaney downgraded Tesla to Neutral from Buy, citing stretched valuations. The analyst maintained the $280 price target but noted that much of the FSD and robotaxi potential is already priced in.",
+            "source": "Goldman Sachs Research",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-29T08:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-012",
+            "headline": "NVIDIA Partners with Major Automakers for In-Vehicle AI",
+            "content": "NVIDIA announced partnerships with BMW, Mercedes-Benz, and Hyundai to integrate its DRIVE Thor platform into next-generation vehicles. The deals are valued at over $10 billion in future revenue.",
+            "source": "NVIDIA Press Release",
+            "sourceType": "official",
+            "timestamp": "2026-01-26T15:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "NVDA"
+            ]
+        },
+        {
+            "id": "art-013",
+            "headline": "Apple Services Revenue Hits New All-Time High",
+            "content": "Apple's services segment generated $25.5 billion in revenue for Q4, a new record. Growth was driven by App Store, Apple Music, and the newly launched Apple Intelligence+ subscription tier.",
+            "source": "Apple Investor Relations",
+            "sourceType": "official",
+            "timestamp": "2026-01-29T14:35:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "art-014",
+            "headline": "Reddit Thread: Tesla Battery Degradation Concerns",
+            "content": "A viral Reddit thread in r/teslamotors discusses battery degradation in 2024 Model Y vehicles. Several users report 15-20% capacity loss after 50,000 miles. Tesla has not officially commented on the claims.",
+            "source": "Reddit r/teslamotors",
+            "sourceType": "social_media",
+            "timestamp": "2026-01-28T19:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-015",
+            "headline": "Microsoft Announces $80 Billion AI Infrastructure Investment",
+            "content": "Microsoft revealed plans to invest $80 billion in AI-enabled data centers during fiscal year 2025. Over half of this investment will be in the United States, supporting both Azure and OpenAI workloads.",
+            "source": "Microsoft Blog",
+            "sourceType": "official",
+            "timestamp": "2026-01-27T09:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "MSFT"
+            ]
+        },
+        {
+            "id": "art-016",
+            "headline": "NVIDIA Stock Hits New All-Time High",
+            "content": "NVIDIA shares closed at $198.50, a new all-time high, as investors bet on continued AI infrastructure spending. The stock has gained 45% year-to-date, outperforming the broader semiconductor index.",
+            "source": "MarketWatch",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T21:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "NVDA"
+            ]
+        },
+        {
+            "id": "art-017",
+            "headline": "Apple Faces EU Antitrust Investigation Over App Store",
+            "content": "European Commission announced a formal investigation into Apple's App Store practices under the Digital Markets Act. Potential fines could reach up to 10% of global revenue if violations are found.",
+            "source": "Financial Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T08:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "art-018",
+            "headline": "Elon Musk Teases Robotaxi Announcement",
+            "content": "In a post on X, Elon Musk hinted at a major robotaxi-related announcement coming in February. The cryptic message read 'February will be interesting for autonomous transport.' No further details were provided.",
+            "source": "@elonmusk",
+            "sourceType": "social_media",
+            "timestamp": "2026-01-29T23:30:00Z",
+            "sector": "technology",
+            "companies": [
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-019",
+            "headline": "Tech Earnings Season Exceeds Expectations Overall",
+            "content": "With 80% of mega-cap tech companies having reported, aggregate earnings beat analyst estimates by 7.2%. Apple and Microsoft led the outperformance, while smaller tech names showed more mixed results.",
+            "source": "FactSet",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-30T06:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL",
+                "MSFT",
+                "NVDA",
+                "TSLA"
+            ]
+        },
+        {
+            "id": "art-020",
+            "headline": "Supply Chain Alert: Chip Shortage May Impact Q2 Production",
+            "content": "Industry analysts warn that ongoing constraints at TSMC's Arizona facility could impact chip supply for Apple and NVIDIA in Q2. Both companies have declined to comment on production impact.",
+            "source": "DigiTimes",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T04:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "AAPL",
+                "NVDA"
+            ]
+        }
+    ]
+}
