@@ -12,6 +12,7 @@
 import { useState, useCallback } from 'react';
 import Header from './components/Header';
 import QueryPanel from './components/QueryPanel';
+import BrandTicker from './components/BrandTicker';
 import IntelligenceCard from './components/IntelligenceCard';
 import ExplainabilityCard from './components/ExplainabilityCard';
 import KeyInsights from './components/KeyInsights';
@@ -66,19 +67,15 @@ export default function App() {
         }
     }, []);
 
+    const hasResults = !isLoading && result?.analysis;
+
     return (
         <div className="app-container">
             <Header />
 
             <QueryPanel onAnalyze={handleAnalyze} isLoading={isLoading} />
 
-            {/* Error Banner */}
-            {error && (
-                <div className="error-banner">
-                    <span className="error-icon">✕</span>
-                    <span className="error-text">{error}</span>
-                </div>
-            )}
+            <BrandTicker />
 
             {/* Loading State */}
             {isLoading && (
@@ -93,8 +90,16 @@ export default function App() {
             )}
 
             {/* Results Grid */}
-            {!isLoading && result?.analysis ? (
+            {hasResults ? (
                 <div className="dashboard-grid">
+                    {/* Inline Error Banner (inside results) */}
+                    {error && (
+                        <div className="inline-error full-width">
+                            <span className="error-icon">⚠</span>
+                            <span className="error-text">{error}</span>
+                        </div>
+                    )}
+
                     {/* Hero: Intelligence Summary */}
                     <IntelligenceCard analysis={result.analysis} />
 
@@ -120,6 +125,16 @@ export default function App() {
                 </div>
             ) : (
                 !isLoading && !error && <EmptyState />
+            )}
+
+            {/* Inline Error when no results yet */}
+            {!isLoading && error && !result && (
+                <div className="inline-error-container">
+                    <div className="inline-error">
+                        <span className="error-icon">⚠</span>
+                        <span className="error-text">{error}</span>
+                    </div>
+                </div>
             )}
 
             {/* No Results Message */}
