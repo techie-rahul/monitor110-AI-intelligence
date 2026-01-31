@@ -1,6 +1,6 @@
 /**
  * QueryPanel Component
- * Input for market queries with analyze button
+ * Hero-style centered search bar with helper text
  */
 
 import { useState } from 'react';
@@ -22,26 +22,30 @@ export default function QueryPanel({ onAnalyze, isLoading }) {
     };
 
     return (
-        <div className="query-panel">
-            <label className="query-label">Market Intelligence Query</label>
-            <form className="query-input-group" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    className="query-input"
-                    placeholder="e.g., Apple earnings, Tesla FSD, NVIDIA AI demand, Microsoft Azure..."
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    disabled={isLoading}
-                />
-                <button
-                    type="submit"
-                    className={`query-button ${isLoading ? 'loading' : ''}`}
-                    disabled={isLoading || !query.trim()}
-                >
-                    {isLoading ? 'Analyzing...' : 'Analyze'}
-                </button>
-            </form>
+        <div className="query-panel hero">
+            <div className="query-hero-content">
+                <form className="query-input-group" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        className="query-input"
+                        placeholder="Nvidia AI demand • Indian car market • Bitcoin regulation"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        onKeyDown={handleKeyDown}
+                        disabled={isLoading}
+                    />
+                    <button
+                        type="submit"
+                        className={`query-button ${isLoading ? 'loading' : ''}`}
+                        disabled={isLoading || !query.trim()}
+                    >
+                        {isLoading ? 'Analyzing...' : 'Analyze'}
+                    </button>
+                </form>
+                <p className="query-helper-text">
+                    Analyzes credible sources only. Off-topic queries return neutral insights.
+                </p>
+            </div>
         </div>
     );
 }
