@@ -27,7 +27,7 @@ const KNOWN_ENTITIES = {
 
     // Indian Companies
     'reliance': ['reliance', 'jio', 'mukesh ambani', 'ril'],
-    'tata': ['tata', 'tata motors', 'tata group', 'ratan tata', 'tcs'],
+    'tata': ['tata', 'tata motors', 'tata group', 'ratan tata', 'tcs', 'tata power'],
     'infosys': ['infosys', 'infy', 'salil parekh', 'infosys technologies'],
     'tcs': ['tcs', 'tata consultancy', 'tata consulting'],
     'hdfc': ['hdfc', 'hdfc bank', 'housing development finance'],
@@ -45,6 +45,37 @@ const KNOWN_ENTITIES = {
     'ethereum': ['ethereum', 'eth', 'ether', 'vitalik', 'eth2'],
     'crypto': ['crypto', 'cryptocurrency', 'blockchain', 'defi', 'web3'],
 
+    // Banking & Financial Policy
+    'banking': ['bank', 'banking', 'rbi', 'interest rate', 'repo rate', 'monetary policy', 'npa', 'credit growth'],
+    'rbi': ['rbi', 'reserve bank', 'repo', 'monetary'],
+    'sbi': ['sbi', 'state bank'],
+    'fed': ['fed', 'federal reserve', 'fomc', 'powell'],
+    'jpmorgan': ['jpmorgan', 'jpm', 'jp morgan', 'jamie dimon'],
+
+    // Commodities
+    'commodities': ['commodity', 'commodities'],
+    'oil': ['oil', 'crude', 'brent', 'wti', 'opec', 'petroleum'],
+    'gold': ['gold', 'bullion', 'precious metal'],
+    'silver': ['silver'],
+    'copper': ['copper'],
+    'gas': ['natural gas', 'lng', 'gas prices'],
+
+    // Energy & Power
+    'energy': ['energy', 'power', 'electricity', 'grid', 'utility'],
+    'solar': ['solar', 'photovoltaic', 'pv'],
+    'wind': ['wind power', 'wind energy', 'wind turbine'],
+    'renewable': ['renewable', 'clean energy', 'green energy'],
+    'hydrogen': ['hydrogen', 'green hydrogen', 'electrolyzer'],
+    'adani': ['adani', 'adani green', 'adani power'],
+
+    // Healthcare & Pharma
+    'healthcare': ['healthcare', 'health care', 'hospital', 'medical'],
+    'pharma': ['pharma', 'pharmaceutical', 'drug', 'medicine', 'fda'],
+    'biocon': ['biocon'],
+    'sunpharma': ['sun pharma', 'sunpharma', 'sun pharmaceutical'],
+    'apollo': ['apollo', 'apollo hospitals'],
+    'drreddy': ['dr reddy', 'drreddy', 'dr. reddy'],
+
     // Sectors & Topics
     'ev': ['ev', 'electric vehicle', 'electric car', 'electric scooter', 'battery', 'charging'],
     'auto': ['auto', 'automobile', 'car sales', 'vehicle', 'automotive', 'car market'],
@@ -52,33 +83,30 @@ const KNOWN_ENTITIES = {
     'cloud': ['cloud', 'azure', 'aws', 'saas', 'data center'],
     'earnings': ['earnings', 'revenue', 'profit', 'q1', 'q2', 'q3', 'q4', 'quarterly', 'fiscal'],
     'stock': ['stock', 'shares', 'market cap', 'valuation', 'price target', 'ipo'],
-    'banking': ['bank', 'banking', 'rbi', 'interest rate', 'repo rate', 'monetary policy', 'npa'],
     'markets': ['sensex', 'nifty', 'bse', 'nse', 'fii', 'market', 'index'],
-    'india': ['india', 'indian', 'rupee', 'inr', 'rbi', 'sebi'],
+    'india': ['india', 'indian', 'rupee', 'inr', 'sebi'],
     'finance': ['finance', 'financial', 'fintech', 'payment'],
-    'semiconductor': ['semiconductor', 'chip', 'chips', 'tsmc', 'foundry', 'fab'],
-    'energy': ['energy', 'solar', 'renewable', 'power', 'grid']
+    'semiconductor': ['semiconductor', 'chip', 'chips', 'tsmc', 'foundry', 'fab']
 };
 
 // ============================================================================
 // OFF-TOPIC INDICATORS - Topics truly NOT in our dataset
 // ============================================================================
 const OFF_TOPIC_INDICATORS = [
-    // Commodities (except crypto)
-    'silver', 'gold', 'platinum', 'palladium', 'oil', 'crude', 'natural gas', 'wheat', 'corn',
     // Real Estate  
-    'real estate', 'property', 'housing', 'mortgage', 'rent',
-    // Healthcare
-    'healthcare', 'pharma', 'pharmaceutical', 'biotech', 'hospital', 'medicine',
+    'real estate', 'property', 'mortgage', 'rent',
     // Consumer & Retail
     'retail', 'fashion', 'luxury', 'apparel', 'clothing',
     // Agriculture
     'agriculture', 'farming', 'food', 'crop',
     // Entertainment & Sports
-    'movie', 'cinema', 'bollywood', 'hollywood', 'sports', 'football', 'cricket', 'olympics',
+    'movie', 'cinema', 'bollywood', 'hollywood', 'sports', 'football', 'cricket', 'olympics', 'youtube', 'entertainment',
     // Travel
-    'travel', 'tourism', 'hotel', 'airline', 'flight'
+    'travel', 'tourism', 'hotel', 'airline', 'flight',
+    // Other
+    'weather', 'recipe', 'cooking', 'gaming', 'video game'
 ];
+
 
 /**
  * Extract meaningful terms from a query
