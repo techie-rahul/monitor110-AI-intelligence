@@ -245,6 +245,266 @@
                 "AAPL",
                 "NVDA"
             ]
+        },
+        {
+            "id": "art-021",
+            "headline": "Sensex Hits Record High on Strong FII Inflows",
+            "content": "The BSE Sensex crossed 85,000 for the first time, driven by sustained foreign institutional investor inflows exceeding $5 billion in January. Banking and IT stocks led the rally, with HDFC Bank and TCS among top gainers.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-30T09:30:00Z",
+            "sector": "finance",
+            "companies": [
+                "HDFC",
+                "TCS"
+            ]
+        },
+        {
+            "id": "art-022",
+            "headline": "RBI Holds Interest Rates Steady Amid Inflation Concerns",
+            "content": "The Reserve Bank of India maintained the repo rate at 6.5% for the eighth consecutive meeting, citing persistent food inflation. Governor Shaktikanta Das indicated rate cuts may begin in Q3 2026 if inflation trends toward the 4% target.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T11:00:00Z",
+            "sector": "finance",
+            "companies": [
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-023",
+            "headline": "Tata Motors Reports 25% Growth in EV Sales",
+            "content": "Tata Motors announced a 25% year-over-year increase in electric vehicle sales, with the Nexon EV and Tiago EV leading demand. The company aims to launch 10 new EV models by 2027 and expand charging infrastructure across tier-2 cities.",
+            "source": "Economic Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T14:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "TATA",
+                "EV"
+            ]
+        },
+        {
+            "id": "art-024",
+            "headline": "Infosys Wins $1.5 Billion Digital Transformation Deal",
+            "content": "Infosys secured a landmark $1.5 billion contract with a major European bank for cloud migration and AI integration services. CEO Salil Parekh called it the largest deal in company history, to be executed over 7 years.",
+            "source": "Infosys Press Release",
+            "sourceType": "official",
+            "timestamp": "2026-01-30T06:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "INFY"
+            ]
+        },
+        {
+            "id": "art-025",
+            "headline": "Bitcoin Surges Past $120,000 on ETF Momentum",
+            "content": "Bitcoin reached an all-time high of $121,500 as spot ETF inflows exceeded $2 billion in a single week. BlackRock's iShares Bitcoin Trust now holds over 500,000 BTC, making it the largest Bitcoin fund globally.",
+            "source": "CoinDesk",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-30T08:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "BTC",
+                "CRYPTO"
+            ]
+        },
+        {
+            "id": "art-026",
+            "headline": "Ethereum Shanghai Upgrade Boosts Staking Participation",
+            "content": "Following the Ethereum network's latest upgrade, staking participation has increased to 35% of total supply. Validator rewards have stabilized at 4.2% annually, attracting institutional stakers including Coinbase and Lido.",
+            "source": "The Block",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T15:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "ETH",
+                "CRYPTO"
+            ]
+        },
+        {
+            "id": "art-027",
+            "headline": "SEC Approves First Ethereum Spot ETF",
+            "content": "The U.S. Securities and Exchange Commission approved the first spot Ethereum ETF, with trading expected to begin in February. Analysts predict $5-10 billion in inflows during the first quarter of availability.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T16:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "ETH",
+                "CRYPTO"
+            ]
+        },
+        {
+            "id": "art-028",
+            "headline": "India Proposes 30% Crypto Tax with Stricter Compliance",
+            "content": "The Indian Finance Ministry proposed maintaining the 30% tax on crypto gains while introducing mandatory KYC for all exchanges. Industry bodies expressed concern that stricter rules could push trading offshore.",
+            "source": "Economic Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T10:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "CRYPTO",
+                "BTC"
+            ]
+        },
+        {
+            "id": "art-029",
+            "headline": "BYD Overtakes Tesla in Global EV Sales for Q4",
+            "content": "Chinese automaker BYD delivered 1.2 million electric vehicles in Q4 2025, surpassing Tesla's 1.1 million units. BYD's aggressive pricing and expansion into Europe and Southeast Asia drove the record quarter.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T12:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "BYD",
+                "TSLA",
+                "EV"
+            ]
+        },
+        {
+            "id": "art-030",
+            "headline": "Ola Electric IPO Oversubscribed 10x on Strong Demand",
+            "content": "Ola Electric's IPO was oversubscribed by 10 times, valuing the company at $8 billion. The electric scooter maker plans to use proceeds to expand battery manufacturing and launch its first electric car by 2027.",
+            "source": "CNBC",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T08:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "OLA",
+                "EV"
+            ]
+        },
+        {
+            "id": "art-031",
+            "headline": "Reliance Jio Crosses 500 Million Subscribers",
+            "content": "Reliance Jio announced crossing 500 million mobile subscribers, cementing its position as India's largest telecom operator. ARPU increased to ₹195 on the back of bundled 5G and entertainment services.",
+            "source": "Reliance IR",
+            "sourceType": "official",
+            "timestamp": "2026-01-30T05:00:00Z",
+            "sector": "telecom",
+            "companies": [
+                "RELIANCE"
+            ]
+        },
+        {
+            "id": "art-032",
+            "headline": "Indian Auto Sales Hit Record High in January",
+            "content": "Passenger vehicle sales in India reached 4.2 million units in January, a new monthly record. Maruti Suzuki, Tata Motors, and Mahindra led the market, with SUVs accounting for 55% of all sales.",
+            "source": "SIAM",
+            "sourceType": "official",
+            "timestamp": "2026-01-31T04:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "TATA",
+                "AUTO"
+            ]
+        },
+        {
+            "id": "art-033",
+            "headline": "Ather Energy Launches New Electric Scooter with 150km Range",
+            "content": "Ather Energy unveiled the Ather 450X Pro with 150km real-world range and 3.9-second 0-40 acceleration. The Bangalore-based startup aims to double its production capacity to 500,000 units annually.",
+            "source": "Autocar India",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T11:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "ATHER",
+                "EV"
+            ]
+        },
+        {
+            "id": "art-034",
+            "headline": "Nifty IT Index Gains 3% on Strong Q4 Guidance",
+            "content": "The Nifty IT index rose 3% as major IT companies issued upbeat guidance for Q4. TCS, Infosys, and Wipro all projected double-digit growth driven by AI and cloud services demand from US clients.",
+            "source": "Moneycontrol",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T10:00:00Z",
+            "sector": "technology",
+            "companies": [
+                "TCS",
+                "INFY"
+            ]
+        },
+        {
+            "id": "art-035",
+            "headline": "Global EV Battery Prices Fall Below $100/kWh",
+            "content": "BloombergNEF reports that average EV battery pack prices have fallen below $100/kWh for the first time, a key threshold for cost parity with internal combustion vehicles. Chinese manufacturers led the cost reduction.",
+            "source": "BloombergNEF",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-26T14:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "EV",
+                "BYD"
+            ]
+        },
+        {
+            "id": "art-036",
+            "headline": "Bitcoin Mining Difficulty Hits New All-Time High",
+            "content": "Bitcoin network difficulty reached a new record as miners deploy next-generation ASIC hardware. Hashrate has increased 40% year-over-year, with North American mining operations gaining market share.",
+            "source": "CoinDesk",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T20:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "BTC",
+                "CRYPTO"
+            ]
+        },
+        {
+            "id": "art-037",
+            "headline": "ICICI Bank Reports 20% Profit Growth in Q3",
+            "content": "ICICI Bank posted a 20% year-over-year increase in net profit to ₹12,500 crore for Q3. Retail loan growth of 18% and stable asset quality drove the performance, with NPA ratio declining to 2.1%.",
+            "source": "ICICI Bank IR",
+            "sourceType": "official",
+            "timestamp": "2026-01-27T07:00:00Z",
+            "sector": "finance",
+            "companies": [
+                "ICICI",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-038",
+            "headline": "Tesla Expands Supercharger Network in India",
+            "content": "Tesla announced plans to install 500 Supercharger stations across India by end of 2026, ahead of its Model Y launch in the country. The expansion covers major highways and metropolitan areas.",
+            "source": "Tesla Blog",
+            "sourceType": "official",
+            "timestamp": "2026-01-29T12:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "TSLA",
+                "EV"
+            ]
+        },
+        {
+            "id": "art-039",
+            "headline": "Crypto Exchange Volumes Surge 50% in January",
+            "content": "Global cryptocurrency exchange volumes increased 50% in January compared to December, led by Bitcoin and Ethereum trading. Institutional participation continues to rise following ETF approvals.",
+            "source": "The Block",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-30T10:00:00Z",
+            "sector": "crypto",
+            "companies": [
+                "BTC",
+                "ETH",
+                "CRYPTO"
+            ]
+        },
+        {
+            "id": "art-040",
+            "headline": "Indian Government Announces EV Subsidy Extension",
+            "content": "The Indian government extended the FAME III subsidy scheme for electric vehicles by two years, allocating ₹10,000 crore for incentives. Two-wheelers and electric buses are the primary beneficiaries of the program.",
+            "source": "PIB India",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T09:00:00Z",
+            "sector": "automobiles",
+            "companies": [
+                "EV",
+                "OLA",
+                "ATHER"
+            ]
         }
     ]
 }

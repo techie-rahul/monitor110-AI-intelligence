@@ -12,31 +12,72 @@
  * 4. Determine if we have sufficient relevant content
  */
 
-// Known entities in our dataset (tech sector focus)
+// ============================================================================
+// KNOWN ENTITIES - Companies, sectors, and topics covered by our dataset
+// ============================================================================
 const KNOWN_ENTITIES = {
-    // Company names and their variations
-    'apple': ['apple', 'aapl', 'iphone', 'ipad', 'mac', 'tim cook', 'cupertino'],
+    // Global Tech Companies
+    'apple': ['apple', 'aapl', 'iphone', 'ipad', 'mac', 'tim cook', 'cupertino', 'vision pro'],
     'microsoft': ['microsoft', 'msft', 'azure', 'windows', 'satya nadella', 'copilot', 'xbox'],
-    'tesla': ['tesla', 'tsla', 'elon musk', 'cybertruck', 'fsd', 'gigafactory', 'ev'],
+    'tesla': ['tesla', 'tsla', 'elon musk', 'cybertruck', 'fsd', 'gigafactory', 'supercharger'],
     'nvidia': ['nvidia', 'nvda', 'jensen huang', 'gpu', 'cuda', 'h100', 'h200', 'geforce'],
+    'google': ['google', 'googl', 'alphabet', 'sundar pichai', 'android', 'chrome'],
+    'amazon': ['amazon', 'amzn', 'aws', 'bezos', 'prime'],
+    'meta': ['meta', 'facebook', 'zuckerberg', 'instagram', 'whatsapp'],
 
-    // Topics in our dataset
+    // Indian Companies
+    'reliance': ['reliance', 'jio', 'mukesh ambani', 'ril'],
+    'tata': ['tata', 'tata motors', 'tata group', 'ratan tata', 'tcs'],
+    'infosys': ['infosys', 'infy', 'salil parekh', 'infosys technologies'],
+    'tcs': ['tcs', 'tata consultancy', 'tata consulting'],
+    'hdfc': ['hdfc', 'hdfc bank', 'housing development finance'],
+    'icici': ['icici', 'icici bank'],
+
+    // EV Companies
+    'byd': ['byd', 'build your dreams'],
+    'nio': ['nio', 'nio inc'],
+    'rivian': ['rivian', 'rivn'],
+    'ola': ['ola', 'ola electric', 'bhavish aggarwal'],
+    'ather': ['ather', 'ather energy'],
+
+    // Crypto
+    'bitcoin': ['bitcoin', 'btc', 'satoshi', 'btc etf', 'spot etf'],
+    'ethereum': ['ethereum', 'eth', 'ether', 'vitalik', 'eth2'],
+    'crypto': ['crypto', 'cryptocurrency', 'blockchain', 'defi', 'web3'],
+
+    // Sectors & Topics
+    'ev': ['ev', 'electric vehicle', 'electric car', 'electric scooter', 'battery', 'charging'],
+    'auto': ['auto', 'automobile', 'car sales', 'vehicle', 'automotive', 'car market'],
     'ai': ['ai', 'artificial intelligence', 'machine learning', 'llm', 'chatgpt', 'generative'],
     'cloud': ['cloud', 'azure', 'aws', 'saas', 'data center'],
     'earnings': ['earnings', 'revenue', 'profit', 'q1', 'q2', 'q3', 'q4', 'quarterly', 'fiscal'],
-    'stock': ['stock', 'shares', 'market cap', 'valuation', 'price target'],
+    'stock': ['stock', 'shares', 'market cap', 'valuation', 'price target', 'ipo'],
+    'banking': ['bank', 'banking', 'rbi', 'interest rate', 'repo rate', 'monetary policy', 'npa'],
+    'markets': ['sensex', 'nifty', 'bse', 'nse', 'fii', 'market', 'index'],
+    'india': ['india', 'indian', 'rupee', 'inr', 'rbi', 'sebi'],
+    'finance': ['finance', 'financial', 'fintech', 'payment'],
+    'semiconductor': ['semiconductor', 'chip', 'chips', 'tsmc', 'foundry', 'fab'],
+    'energy': ['energy', 'solar', 'renewable', 'power', 'grid']
 };
 
-// Topics NOT in our dataset - if query is primarily about these, it's off-topic
+// ============================================================================
+// OFF-TOPIC INDICATORS - Topics truly NOT in our dataset
+// ============================================================================
 const OFF_TOPIC_INDICATORS = [
-    'india', 'indian', 'china', 'chinese', 'europe', 'european',
-    'silver', 'gold', 'oil', 'crude', 'commodity', 'commodities',
-    'real estate', 'property', 'housing',
-    'crypto', 'bitcoin', 'ethereum', 'blockchain',
-    'bank', 'banking', 'loan', 'mortgage',
-    'healthcare', 'pharma', 'biotech',
-    'retail', 'fashion', 'luxury',
-    'agriculture', 'farming', 'food'
+    // Commodities (except crypto)
+    'silver', 'gold', 'platinum', 'palladium', 'oil', 'crude', 'natural gas', 'wheat', 'corn',
+    // Real Estate  
+    'real estate', 'property', 'housing', 'mortgage', 'rent',
+    // Healthcare
+    'healthcare', 'pharma', 'pharmaceutical', 'biotech', 'hospital', 'medicine',
+    // Consumer & Retail
+    'retail', 'fashion', 'luxury', 'apparel', 'clothing',
+    // Agriculture
+    'agriculture', 'farming', 'food', 'crop',
+    // Entertainment & Sports
+    'movie', 'cinema', 'bollywood', 'hollywood', 'sports', 'football', 'cricket', 'olympics',
+    // Travel
+    'travel', 'tourism', 'hotel', 'airline', 'flight'
 ];
 
 /**
@@ -45,19 +86,29 @@ const OFF_TOPIC_INDICATORS = [
  * @returns {string[]} Array of normalized terms
  */
 function extractQueryTerms(query) {
+    // Important 2-character terms that should not be filtered out
+    const importantShortTerms = ['ev', 'ai', 'it', 'uk', 'us'];
+
     return query
         .toLowerCase()
         .replace(/[^\w\s]/g, ' ')
         .split(/\s+/)
-        .filter(term => term.length > 2);
+        .filter(term => term.length > 2 || importantShortTerms.includes(term));
 }
 
+
 /**
- * Check if query contains off-topic indicators
+ * Check if query contains off-topic indicators WITHOUT matching any known entity
  * @param {string[]} queryTerms - Normalized query terms
+ * @param {boolean} hasKnownEntity - Whether query has a known entity match
  * @returns {Object} { isOffTopic: boolean, offTopicTerms: string[] }
  */
-function detectOffTopicQuery(queryTerms) {
+function detectOffTopicQuery(queryTerms, hasKnownEntity) {
+    // If query matches a known entity, it's NOT off-topic
+    if (hasKnownEntity) {
+        return { isOffTopic: false, offTopicTerms: [] };
+    }
+
     const offTopicTerms = queryTerms.filter(term =>
         OFF_TOPIC_INDICATORS.some(indicator =>
             indicator.includes(term) || term.includes(indicator)
@@ -72,27 +123,35 @@ function detectOffTopicQuery(queryTerms) {
 
 /**
  * Check if query matches known entities in our dataset
- * Uses stricter matching to avoid false positives
+ * Dynamically matches against all supported companies, sectors, and topics
  * @param {string[]} queryTerms - Normalized query terms
  * @returns {Object} { hasKnownEntity: boolean, matchedEntities: string[] }
  */
 function detectKnownEntities(queryTerms) {
     const matchedEntities = [];
+    const queryText = queryTerms.join(' ');
 
-    // Only match company names and core topics - not generic terms
-    const STRICT_ENTITIES = {
-        'apple': ['apple', 'aapl'],
-        'microsoft': ['microsoft', 'msft'],
-        'tesla': ['tesla', 'tsla', 'musk'],
-        'nvidia': ['nvidia', 'nvda', 'jensen'],
-        'ai': ['ai', 'artificial intelligence', 'machine learning', 'llm'],
-    };
+    for (const [entity, variations] of Object.entries(KNOWN_ENTITIES)) {
+        // Check if any variation matches any query term
+        const hasMatch = variations.some(variation => {
+            // Exact term match (highest priority)
+            if (queryTerms.includes(variation)) return true;
 
-    for (const [entity, variations] of Object.entries(STRICT_ENTITIES)) {
-        // Require exact word match, not substring
-        const hasMatch = queryTerms.some(term =>
-            variations.some(v => v === term || (term.length > 3 && v.startsWith(term)))
-        );
+            // Multi-word variation match (e.g., "electric vehicle", "tata motors")
+            if (variation.includes(' ') && queryText.includes(variation)) return true;
+
+            // For single-word variations, require exact match or very close prefix
+            // Only allow prefix matching if term is 4+ chars and variation starts with term
+            return queryTerms.some(term => {
+                if (term.length < 4) return false; // Don't do fuzzy match on short terms
+                // Term must be a significant prefix of the variation (>80% length)
+                if (variation.startsWith(term) && term.length >= variation.length * 0.8) return true;
+                // Variation must be an exact prefix of a longer term
+                if (term.startsWith(variation) && variation.length >= 4) return true;
+                return false;
+            });
+        });
+
         if (hasMatch) {
             matchedEntities.push(entity);
         }
@@ -105,6 +164,40 @@ function detectKnownEntities(queryTerms) {
 }
 
 /**
+ * Check if retrieved documents contain companies/sectors matching query
+ * @param {string[]} queryTerms - Normalized query terms
+ * @param {Array} documents - Retrieved documents
+ * @returns {Object} { hasDocumentOverlap: boolean, overlappingCompanies: string[] }
+ */
+function checkDocumentOverlap(queryTerms, documents) {
+    const overlappingCompanies = new Set();
+    const queryText = queryTerms.join(' ');
+
+    for (const doc of documents) {
+        // Check document companies
+        const companies = (doc.companies || []).map(c => c.toLowerCase());
+
+        for (const company of companies) {
+            // Check if query relates to this company
+            if (queryTerms.some(term => company.includes(term) || term.includes(company))) {
+                overlappingCompanies.add(company.toUpperCase());
+            }
+        }
+
+        // Check document sector
+        const sector = (doc.sector || '').toLowerCase();
+        if (sector && queryTerms.some(term => sector.includes(term) || term.includes(sector))) {
+            overlappingCompanies.add(sector.toUpperCase());
+        }
+    }
+
+    return {
+        hasDocumentOverlap: overlappingCompanies.size > 0,
+        overlappingCompanies: Array.from(overlappingCompanies)
+    };
+}
+
+/**
  * Calculate relevance score for a single document
  * @param {string[]} queryTerms - Normalized query terms
  * @param {Object} document - Article/document object
@@ -113,6 +206,7 @@ function detectKnownEntities(queryTerms) {
 function calculateDocumentRelevance(queryTerms, document) {
     const docText = `${document.headline} ${document.content}`.toLowerCase();
     const companies = (document.companies || []).map(c => c.toLowerCase());
+    const sector = (document.sector || '').toLowerCase();
 
     let score = 0;
     let matchedTerms = 0;
@@ -130,10 +224,15 @@ function calculateDocumentRelevance(queryTerms, document) {
             score += 0.4;
         }
 
+        // Sector match
+        if (sector && (sector.includes(term) || term.includes(sector))) {
+            score += 0.3;
+        }
+
         // Entity variation match
         for (const [entity, variations] of Object.entries(KNOWN_ENTITIES)) {
             if (variations.some(v => v.includes(term) || term.includes(v))) {
-                if (docText.includes(entity)) {
+                if (docText.includes(entity) || companies.some(c => c.includes(entity))) {
                     score += 0.2;
                 }
             }
@@ -157,8 +256,11 @@ function calculateDocumentRelevance(queryTerms, document) {
  */
 export function evaluateRelevance(query, documents) {
     const queryTerms = extractQueryTerms(query);
-    const offTopicCheck = detectOffTopicQuery(queryTerms);
     const entityCheck = detectKnownEntities(queryTerms);
+    const offTopicCheck = detectOffTopicQuery(queryTerms, entityCheck.hasKnownEntity);
+    const docOverlap = documents?.length > 0
+        ? checkDocumentOverlap(queryTerms, documents)
+        : { hasDocumentOverlap: false, overlappingCompanies: [] };
 
     // If no documents, definitely not relevant
     if (!documents || documents.length === 0) {
@@ -183,33 +285,37 @@ export function evaluateRelevance(query, documents) {
     const relevantDocs = docScores.filter(d => d.score > 0.3);
     const averageScore = docScores.reduce((sum, d) => sum + d.score, 0) / docScores.length;
 
-    // Decision logic - be LENIENT when known entities are matched
+    // Decision logic
     let isRelevant = true;
     let reason = 'Documents are relevant to query';
 
-    // IMPORTANT: If query matches a known entity (Apple, Tesla, Nvidia, etc.),
-    // we trust that the documents are relevant (our dataset is about these companies)
+    // PRIORITY 1: If query matches known entities, trust the match
     if (entityCheck.hasKnownEntity) {
         isRelevant = true;
         reason = `Query matches known entities: ${entityCheck.matchedEntities.join(', ')}`;
     }
-    // Case 1: Query is clearly off-topic and no known entities
+    // PRIORITY 2: If retrieved documents have company/sector overlap with query
+    else if (docOverlap.hasDocumentOverlap) {
+        isRelevant = true;
+        reason = `Query matches document topics: ${docOverlap.overlappingCompanies.join(', ')}`;
+    }
+    // PRIORITY 3: Query is clearly off-topic (no entity match, no doc overlap)
     else if (offTopicCheck.isOffTopic) {
         isRelevant = false;
-        reason = `Query contains off-topic terms (${offTopicCheck.offTopicTerms.join(', ')}) not covered by our tech-sector dataset`;
+        reason = `Query topic (${offTopicCheck.offTopicTerms.join(', ')}) not covered by our dataset`;
     }
-    // Case 2: No known entities AND low relevance scores
-    else if (averageScore < 0.2) {
+    // PRIORITY 4: Low relevance scores and no known entities
+    else if (averageScore < 0.15) {
         isRelevant = false;
         reason = 'Query does not match any known entities or topics in our dataset';
     }
-    // Case 3: Too few relevant documents and very low average
-    else if (relevantDocs.length < 1 && averageScore < 0.15) {
+    // PRIORITY 5: Too few relevant documents
+    else if (relevantDocs.length < 1 && averageScore < 0.1) {
         isRelevant = false;
         reason = 'Insufficient relevant documents found';
     }
 
-    console.log(`[Relevance] Query: "${query}" | Relevant: ${isRelevant} | Avg Score: ${averageScore.toFixed(2)} | Relevant Docs: ${relevantDocs.length}/${documents.length}`);
+    console.log(`[Relevance] Query: "${query}" | Relevant: ${isRelevant} | Entities: ${entityCheck.matchedEntities.join(',')} | Avg Score: ${averageScore.toFixed(2)} | Docs: ${relevantDocs.length}/${documents.length}`);
 
     return {
         isRelevant,
@@ -220,6 +326,7 @@ export function evaluateRelevance(query, documents) {
         queryTerms,
         offTopicCheck,
         entityCheck,
+        docOverlap,
         docScores
     };
 }
@@ -234,15 +341,15 @@ export function generateNotRelevantResponse(query, relevanceResult) {
     return {
         success: true,
         analysis: {
-            narrative: `Insufficient relevant data to generate a reliable market insight for "${query}". Our dataset focuses on major tech companies (Apple, Microsoft, Tesla, NVIDIA) and may not cover this topic.`,
+            narrative: `Insufficient relevant data to generate a reliable market insight for "${query}". Our dataset covers Technology, EVs, Indian markets, Crypto, and Finance. This query falls outside the current coverage.`,
             sentiment: 'NEUTRAL',
             sentimentScore: 0,
             confidence: 'RUMOR',
             confidenceExplanation: relevanceResult.reason,
             keyInsights: [
                 'Query topic not well-covered by available data sources',
-                'Consider refining your query to focus on: Apple, Microsoft, Tesla, or NVIDIA',
-                'Our dataset covers tech sector earnings, AI developments, and stock performance'
+                'Our dataset covers: Tech (Apple, Microsoft, Tesla, NVIDIA), Indian markets (Tata, Reliance, Infosys), Crypto (Bitcoin, Ethereum), and EV sector',
+                'Consider refining your query to match these focus areas'
             ],
             sourcesUsed: [],
             dataLimitations: 'Query does not match the focus areas of our curated financial dataset.'
