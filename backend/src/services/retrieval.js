@@ -45,15 +45,54 @@ export function retrieveRelevantContent(query, options = {}) {
 
     // Company name to ticker mapping for better matching
     const companyAliases = {
+        // Global Tech
         'apple': 'AAPL',
         'microsoft': 'MSFT',
         'tesla': 'TSLA',
         'nvidia': 'NVDA',
+        'google': 'GOOGL',
+        'amazon': 'AMZN',
+        'meta': 'META',
+
+        // Indian Markets
+        'reliance': 'RELIANCE',
+        'tata': 'TATA',
+        'tcs': 'TCS',
+        'infosys': 'INFY',
+        'hdfc': 'HDFC',
+        'icici': 'ICICI',
+
+        // EV Sector
+        'byd': 'BYD',
+        'nio': 'NIO',
+        'rivian': 'RIVN',
+        'ola': 'OLA',
+        'ather': 'ATHER',
+
+        // Crypto
+        'bitcoin': 'BTC',
+        'ethereum': 'ETH',
+        'crypto': 'CRYPTO',
+        'blockchain': 'BLOCKCHAIN',
+
+        // Sectors
+        'ev': 'EV',
+        'automobile': 'AUTO',
+        'banking': 'BANKS',
+        'energy': 'ENERGY',
+        'semiconductor': 'CHIPS',
+
+        // Ticker aliases (lowercase)
         'msft': 'MSFT',
         'aapl': 'AAPL',
         'tsla': 'TSLA',
-        'nvda': 'NVDA'
+        'nvda': 'NVDA',
+        'googl': 'GOOGL',
+        'amzn': 'AMZN',
+        'btc': 'BTC',
+        'eth': 'ETH'
     };
+
 
     // Expand query terms to include ticker matches
     const expandedTerms = queryTerms.map(term => {
