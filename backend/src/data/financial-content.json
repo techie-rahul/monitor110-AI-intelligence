@@ -505,6 +505,326 @@
                 "OLA",
                 "ATHER"
             ]
+        },
+        {
+            "id": "art-041",
+            "headline": "RBI Maintains Repo Rate at 6.5% Amid Inflation Stability",
+            "content": "The Reserve Bank of India kept the repo rate unchanged at 6.5% for the ninth consecutive meeting. Governor Das cited stable core inflation and improving growth outlook. Markets expect rate cuts to begin in Q2 2026.",
+            "source": "RBI",
+            "sourceType": "official",
+            "timestamp": "2026-01-30T11:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "RBI",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-042",
+            "headline": "SBI Reports Record Quarterly Profit on Strong Loan Growth",
+            "content": "State Bank of India posted a 25% increase in net profit to ₹18,500 crore for Q3. Retail loan growth reached 16% while corporate advances grew by 12%. Net interest margin remained stable at 3.4%.",
+            "source": "Economic Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T08:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "SBI",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-043",
+            "headline": "Federal Reserve Signals Potential Rate Cuts in 2026",
+            "content": "The Federal Reserve indicated that rate cuts may begin in mid-2026 if inflation continues its downward trajectory. Fed Chair Powell emphasized data-dependency while markets priced in 75 basis points of cuts for the year.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T19:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "FED",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-044",
+            "headline": "JP Morgan Forecasts Strong Year for Indian Banking Sector",
+            "content": "JP Morgan analysts upgraded Indian banking stocks to overweight, citing improving asset quality and credit growth. HDFC Bank and ICICI Bank were named top picks with expected earnings growth of 18-20%.",
+            "source": "JP Morgan Research",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-27T14:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "JPM",
+                "HDFC",
+                "ICICI",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-045",
+            "headline": "Digital Lending Regulations Tightened by RBI",
+            "content": "RBI issued new guidelines requiring digital lenders to disclose all costs upfront and cap interest rates. The regulations aim to protect consumers while fintech companies raised concerns about compliance costs.",
+            "source": "Mint",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-26T10:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "RBI",
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-046",
+            "headline": "Banking Credit Growth Reaches 15% on Strong Retail Demand",
+            "content": "India's banking sector credit growth touched 15% year-over-year, driven by housing loans and personal credit. Commercial credit remained steady at 10% growth as corporates continued deleveraging.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-30T06:00:00Z",
+            "sector": "banking",
+            "companies": [
+                "BANKS"
+            ]
+        },
+        {
+            "id": "art-047",
+            "headline": "Crude Oil Prices Surge to $85 on Middle East Tensions",
+            "content": "Brent crude rose to $85 per barrel following supply disruptions in the Red Sea. OPEC+ maintained production cuts while analysts warned prices could touch $90 if tensions escalate further.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T16:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "OIL",
+                "CRUDE",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-048",
+            "headline": "Gold Hits New All-Time High Above $2,200 Per Ounce",
+            "content": "Gold prices reached a record $2,215 per ounce as investors sought safe-haven assets amid global uncertainty. Central bank buying from China and India supported demand while ETF inflows remained strong.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-30T08:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "GOLD",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-049",
+            "headline": "India's Oil Imports Rise 8% Amid Growing Energy Demand",
+            "content": "India's crude oil imports increased 8% in December, reflecting strong fuel demand from transportation and manufacturing sectors. The government urged refiners to diversify import sources beyond Russia.",
+            "source": "Economic Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-28T07:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "OIL",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-050",
+            "headline": "Silver Demand Surges on Solar Panel Manufacturing Boom",
+            "content": "Silver prices rose 12% this month as solar panel manufacturers increased demand for the metal. Industrial use now accounts for 60% of silver consumption globally, driven by renewable energy expansion.",
+            "source": "Kitco",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T12:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "SILVER",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-051",
+            "headline": "Copper Prices Rally on EV Battery Demand",
+            "content": "Copper touched a six-month high at $9,500 per tonne as electric vehicle production accelerated globally. Analysts forecast supply deficits through 2027 as mining output lags demand growth.",
+            "source": "Financial Times",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T14:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "COPPER",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-052",
+            "headline": "Natural Gas Prices Stabilize After Winter Demand Peak",
+            "content": "Natural gas prices stabilized at $3.20 per MMBtu as winter heating demand peaked. Storage levels remain above five-year averages, limiting upside potential for prices through spring.",
+            "source": "S&P Global",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-26T15:00:00Z",
+            "sector": "commodities",
+            "companies": [
+                "GAS",
+                "COMMODITIES"
+            ]
+        },
+        {
+            "id": "art-053",
+            "headline": "India's Solar Capacity Additions Reach Record High",
+            "content": "India added 25 GW of solar power capacity in 2025, a new annual record. The government aims to reach 500 GW of renewable capacity by 2030, with solar accounting for 60% of additions.",
+            "source": "Ministry of Power",
+            "sourceType": "official",
+            "timestamp": "2026-01-30T10:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "SOLAR",
+                "ENERGY",
+                "RENEWABLE"
+            ]
+        },
+        {
+            "id": "art-054",
+            "headline": "Adani Green Secures $3 Billion for Renewable Expansion",
+            "content": "Adani Green Energy secured $3 billion in project financing for new wind and solar farms. The company targets 45 GW of operational capacity by 2028, making it one of the largest renewable players globally.",
+            "source": "Bloomberg",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-29T09:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "ADANI",
+                "ENERGY",
+                "RENEWABLE"
+            ]
+        },
+        {
+            "id": "art-055",
+            "headline": "Global Wind Power Installations Grow 20% in 2025",
+            "content": "Global wind power capacity additions reached 120 GW in 2025, a 20% increase from the previous year. China led installations with 60 GW while India added 8 GW of new wind capacity.",
+            "source": "IEA",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T11:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "WIND",
+                "ENERGY",
+                "RENEWABLE"
+            ]
+        },
+        {
+            "id": "art-056",
+            "headline": "Power Demand in India Reaches All-Time High",
+            "content": "India's peak power demand touched 250 GW, a new record driven by industrial growth and air conditioning load. Power ministry assured adequate supply with coal stocks at 30-day levels.",
+            "source": "PTI",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-27T08:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "POWER",
+                "ENERGY"
+            ]
+        },
+        {
+            "id": "art-057",
+            "headline": "Tata Power Announces Green Hydrogen Pilot Project",
+            "content": "Tata Power launched a green hydrogen pilot project in Gujarat with 10 MW electrolyzer capacity. The company plans to scale to 1 GW by 2030 as part of India's national hydrogen mission.",
+            "source": "Tata Power",
+            "sourceType": "official",
+            "timestamp": "2026-01-26T13:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "TATA",
+                "ENERGY",
+                "HYDROGEN"
+            ]
+        },
+        {
+            "id": "art-058",
+            "headline": "Battery Storage Costs Fall 15% Enabling Grid-Scale Deployment",
+            "content": "Lithium-ion battery storage costs fell 15% in 2025, making grid-scale storage economically viable. India announced plans for 50 GWh of battery storage by 2030 to support renewable integration.",
+            "source": "BNEF",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-30T07:00:00Z",
+            "sector": "energy",
+            "companies": [
+                "BATTERY",
+                "ENERGY"
+            ]
+        },
+        {
+            "id": "art-059",
+            "headline": "Sun Pharma Reports Strong Q3 on US Specialty Sales",
+            "content": "Sun Pharmaceutical posted 18% revenue growth driven by strong specialty drug sales in the US market. The company raised full-year guidance and announced plans to expand biosimilar portfolio.",
+            "source": "Sun Pharma IR",
+            "sourceType": "official",
+            "timestamp": "2026-01-29T06:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "SUNPHARMA",
+                "PHARMA",
+                "HEALTHCARE"
+            ]
+        },
+        {
+            "id": "art-060",
+            "headline": "FDA Approves Breakthrough Cancer Drug from Biocon",
+            "content": "The US FDA granted approval to Biocon's novel cancer immunotherapy drug, marking the company's first major biologic approval in the US. The drug is expected to generate $500 million in peak sales.",
+            "source": "FDA",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T18:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "BIOCON",
+                "PHARMA",
+                "HEALTHCARE"
+            ]
+        },
+        {
+            "id": "art-061",
+            "headline": "India Healthcare Spending to Grow 12% Annually",
+            "content": "A KPMG report projected India's healthcare spending will grow 12% annually through 2030, driven by rising insurance penetration and government programs. Hospital chains and diagnostic labs are key beneficiaries.",
+            "source": "KPMG",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-27T09:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "HEALTHCARE"
+            ]
+        },
+        {
+            "id": "art-062",
+            "headline": "Dr Reddy's Expands Generic Portfolio with 15 New Launches",
+            "content": "Dr Reddy's Laboratories announced 15 new generic drug launches in the US and Europe for 2026. The company aims to improve market share in the $400 billion global generics market.",
+            "source": "Reuters",
+            "sourceType": "major_publication",
+            "timestamp": "2026-01-30T05:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "DRREDDY",
+                "PHARMA",
+                "HEALTHCARE"
+            ]
+        },
+        {
+            "id": "art-063",
+            "headline": "Apollo Hospitals Reports 22% Revenue Growth",
+            "content": "Apollo Hospitals reported 22% revenue growth in Q3 2026 driven by higher patient volumes and increased health insurance utilization. The company opened 5 new hospitals during the quarter.",
+            "source": "Apollo IR",
+            "sourceType": "official",
+            "timestamp": "2026-01-28T08:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "APOLLO",
+                "HEALTHCARE"
+            ]
+        },
+        {
+            "id": "art-064",
+            "headline": "Global Pharma R&D Spending Reaches $250 Billion",
+            "content": "Global pharmaceutical R&D spending reached $250 billion in 2025, with oncology and immunology attracting the largest investments. AI-driven drug discovery is accelerating clinical trial timelines.",
+            "source": "McKinsey",
+            "sourceType": "analyst",
+            "timestamp": "2026-01-26T16:00:00Z",
+            "sector": "healthcare",
+            "companies": [
+                "PHARMA",
+                "HEALTHCARE"
+            ]
         }
     ]
 }

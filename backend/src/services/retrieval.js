@@ -75,11 +75,54 @@ export function retrieveRelevantContent(query, options = {}) {
         'crypto': 'CRYPTO',
         'blockchain': 'BLOCKCHAIN',
 
+        // Banking & Financial Policy
+        'rbi': 'RBI',
+        'sbi': 'SBI',
+        'bank': 'BANKS',
+        'banking': 'BANKS',
+        'interest': 'BANKS',
+        'repo': 'RBI',
+        'inflation': 'BANKS',
+        'fed': 'FED',
+        'credit': 'BANKS',
+        'loan': 'BANKS',
+        'jpmorgan': 'JPM',
+
+        // Commodities
+        'oil': 'OIL',
+        'crude': 'CRUDE',
+        'gold': 'GOLD',
+        'silver': 'SILVER',
+        'copper': 'COPPER',
+        'commodity': 'COMMODITIES',
+        'commodities': 'COMMODITIES',
+        'opec': 'OIL',
+        'gas': 'GAS',
+
+        // Energy & Power
+        'power': 'POWER',
+        'solar': 'SOLAR',
+        'renewable': 'RENEWABLE',
+        'wind': 'WIND',
+        'energy': 'ENERGY',
+        'hydrogen': 'HYDROGEN',
+        'battery': 'BATTERY',
+        'grid': 'ENERGY',
+        'adani': 'ADANI',
+
+        // Healthcare & Pharma
+        'pharma': 'PHARMA',
+        'healthcare': 'HEALTHCARE',
+        'drug': 'PHARMA',
+        'fda': 'PHARMA',
+        'biocon': 'BIOCON',
+        'sunpharma': 'SUNPHARMA',
+        'apollo': 'APOLLO',
+        'hospital': 'HEALTHCARE',
+
         // Sectors
         'ev': 'EV',
         'automobile': 'AUTO',
-        'banking': 'BANKS',
-        'energy': 'ENERGY',
         'semiconductor': 'CHIPS',
 
         // Ticker aliases (lowercase)
@@ -92,6 +135,7 @@ export function retrieveRelevantContent(query, options = {}) {
         'btc': 'BTC',
         'eth': 'ETH'
     };
+
 
 
     // Expand query terms to include ticker matches
