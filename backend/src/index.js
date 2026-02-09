@@ -29,12 +29,17 @@ const PORT = process.env.PORT || 3001;
 
 // Enable CORS for frontend communication (Vite runs on port 5173)
 app.use(cors({
-  origin: [
-    'https://monitor110-ai-intelligence.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: (origin, callback) => {
+    if (!origin || origin.endsWith(".vercel.app")) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 // IMPORTANT: handle preflight
 app.options('*', cors());
